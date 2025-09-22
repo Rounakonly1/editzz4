@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editzz - YouTube Channel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        .video-container {
+            transition: all 0.3s ease;
+        }
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .contact-input {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .contact-input:focus {
+            border-color: #7dd3fc;
+            box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="gradient-bg shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <i data-feather="film" class="text-sky-500 mr-2"></i>
+                    <span class="text-xl font-semibold text-slate-800">Editzz</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-700 hover:text-sky-500 transition">Home</a>
+                    <a href="#about" class="text-slate-700 hover:text-sky-500 transition">About</a>
+                    <a href="#videos" class="text-slate-700 hover:text-sky-500 transition">Videos</a>
+                    <a href="#contact" class="text-slate-700 hover:text-sky-500 transition">Contact</a>
+                </div>
+                <a href="https://www.youtube.com/@editzz-r1-10" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-full flex items-center transition">
+                    <i data-feather="youtube" class="mr-2"></i>
+                    Subscribe
+                </a>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden gradient-bg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-500">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-500">About</a>
+                <a href="#videos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-500">Videos</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-8">Welcome to <span class="text-sky-500">Editzz</span></h1>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/@editzz-r1-10" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-full flex items-center transition">
+                            <i data-feather="youtube" class="mr-2"></i>
+                            Visit Channel
+                        </a>
+                        <a href="#contact" class="border border-slate-300 hover:border-sky-300 text-slate-700 px-6 py-3 rounded-full flex items-center transition">
+                            <i data-feather="mail" class="mr-2"></i>
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-sky-100 rounded-xl opacity-75 blur-lg"></div>
+                        <div class="relative bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="http://static.photos/technology/1024x576/42" alt="Video Editing" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-sky-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-sky-100 shadow-lg">
+                            <img src="https://i.pinimg.com/736x/c9/8b/96/c98b9629548e337ccf84ca336826e7c3.jpg" alt="BMW M4" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-sky-500 text-white px-4 py-2 rounded-full shadow-lg">
+                            <i data-feather="award" class="mr-2"></i>
+                            Editor
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-16" data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-4">Hi there! I'm Editzz</h3>
+                    <p class="text-slate-600 mb-6">I love creating engaging content that entertains and inspires people.</p>
+                    <p class="text-slate-600 mb-6">With a keen eye for detail and a creative approach, I transform raw footage into compelling stories that captivate audiences.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4">
+                                <i data-feather="edit-2" class="text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-800">Creative Editing</h4>
+                                <p class="text-sm text-slate-500">Unique visual storytelling</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4">
+                                <i data-feather="clock" class="text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-800">Fast Delivery</h4>
+                                <p class="text-sm text-slate-500">Timely project completion</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4">
+                                <i data-feather="trending-up" class="text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-800">Engagement Focus</h4>
+                                <p class="text-sm text-slate-500">Content that connects</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4">
+                                <i data-feather="thumbs-up" class="text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-800">Quality Assurance</h4>
+                                <p class="text-sm text-slate-500">High standard results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Featured Videos</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Check out some of my latest video editing work on YouTube</p>
+                <div class="w-20 h-1 bg-sky-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Video 1 -->
+                <div class="video-container bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative pb-[56.25%]">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/7PGL0kNjcKg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Creative Short Edit</h3>
+                        <p class="text-slate-600 text-sm mb-4">A dynamic short video showcasing fast-paced editing techniques.</p>
+                        <a href="https://youtube.com/shorts/7PGL0kNjcKg" target="_blank" class="text-sky-500 hover:text-sky-600 flex items-center text-sm font-medium">
+                            Watch on YouTube <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-container bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative pb-[56.25%]">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/sEzRPraST_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Action Sequence</h3>
+                        <p class="text-slate-600 text-sm mb-4">High-energy edit with smooth transitions and effects.</p>
+                        <a href="https://youtube.com/shorts/sEzRPraST_8" target="_blank" class="text-sky-500 hover:text-sky-600 flex items-center text-sm font-medium">
+                            Watch on YouTube <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-container bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative pb-[56.25%]">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/o7CZ6IKjC_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Cinematic Moment</h3>
+                        <p class="text-slate-600 text-sm mb-4">A beautifully crafted short with cinematic effects.</p>
+                        <a href="https://youtube.com/shorts/o7CZ6IKjC_k" target="_blank" class="text-sky-500 hover:text-sky-600 flex items-center text-sm font-medium">
+                            Watch on YouTube <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-container bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative pb-[56.25%]">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/eP16subl5-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Dynamic Transition</h3>
+                        <p class="text-slate-600 text-sm mb-4">Showcasing advanced transition techniques in a short format.</p>
+                        <a href="https://youtube.com/shorts/eP16subl5-Q" target="_blank" class="text-sky-500 hover:text-sky-600 flex items-center text-sm font-medium">
+                            Watch on YouTube <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="https://www.youtube.com/@editzz-r1-10" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-sky-500 hover:bg-sky-600 transition">
+                    <i data-feather="youtube" class="mr-2"></i>
+                    View All Videos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Get In Touch</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Have a project in mind or need help with video editing? Feel free to reach out!</p>
+                <div class="w-20 h-1 bg-sky-500 mx-auto mt-4"></div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4">
+                                <i data-feather="mail" class="text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-800">Email</h4>
+                                <a href="mailto:r91128577@gmail.com" class="text-slate-600 hover:text-sky-500">r91128577@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4">
+                                <i data-feather="youtube" class="text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-800">YouTube</h4>
+                                <a href="https://www.youtube.com/@editzz-r1-10" target="_blank" class="text-slate-600 hover:text-sky-500">youtube.com/@editzz-r1-10</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4">
+                                <i data-feather="message-circle" class="text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-800">Discord</h4>
+                                <p class="text-slate-600">pe4c_e</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4">
+                                <i data-feather="message-square" class="text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-slate-800">Availability</h4>
+                                <p class="text-slate-600">Saturday-Sunday 2pm-4pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="bg-sky-50 p-8 rounded-xl">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">Connect Directly</h3>
+                        <p class="text-slate-600 mb-6">Prefer to reach out directly? Use the contact information on the left or connect via YouTube/Discord.</p>
+                        <a href="https://www.youtube.com/@editzz-r1-10" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-red-500 hover:bg-red-600 transition">
+                            <i data-feather="youtube" class="mr-2"></i>
+                            Message on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="film" class="text-sky-400 mr-2"></i>
+                        <span class="text-xl font-semibold">Editzz</span>
+                    </div>
+                    <p class="text-slate-300 mb-4">Professional video editing services to elevate your content.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-300 hover:text-sky-400 transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-slate-300 hover:text-sky-400 transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-300 hover:text-sky-400 transition">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@editzz-r1-10" target="_blank" class="text-slate-300 hover:text-sky-400 transition">
+                            <i data-feather="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-slate-300 hover:text-sky-400 transition">Home</a></li>
+                        <li><a href="#about" class="text-slate-300 hover:text-sky-400 transition">About</a></li>
+                        <li><a href="#videos" class="text-slate-300 hover:text-sky-400 transition">Videos</a></li>
+                        <li><a href="#contact" class="text-slate-300 hover:text-sky-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-slate-300 mb-4">Subscribe to get updates on new videos and editing tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-slate-800 w-full">
+                        <button type="submit" class="bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-r-lg transition">
+                            <i data-feather="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 mb-4 md:mb-0">© 2025 Editzz. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-sky-400 transition">Privacy Policy</a>
+                    <a href="#" class="text-slate-400 hover:text-sky-400 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Feather icons
+        feather.replace();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
